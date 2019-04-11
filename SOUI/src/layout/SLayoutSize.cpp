@@ -132,6 +132,12 @@ namespace SOUI
 		return *this;
 	}
 
+	SLayoutSize & SLayoutSize::operator=(const float size)
+	{
+		fSize = size;
+		return *this;
+	}
+
 	SLayoutSize SLayoutSize::fromString(const SStringW & strSize)
 	{
 		SLayoutSize ret;

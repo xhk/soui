@@ -23,6 +23,7 @@ namespace SOUI
 		bool isMatchParent() const;
 
 		void setSize(float fSize, Unit unit);
+		float getSize() { return fSize; }
 		bool isSpecifiedSize() const;
 		
 		void setInvalid();
@@ -37,6 +38,8 @@ namespace SOUI
 		void parseString(const SStringW & strSize);
 
 		SLayoutSize & operator = (const SLayoutSize & src);
+		SLayoutSize & operator = (const float fSize);
+
 
 		static SLayoutSize fromString(const SStringW & strSize);
 		static bool fequal(float a, float b);
